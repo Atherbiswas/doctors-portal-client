@@ -20,7 +20,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         bannerImage: "url('/src/assets/images/bg.png')",
-        doctorImage: "url('/src/assets/images/appointment.png')"
+        doctorImage: "url('/src/assets/images/appointment.png')",
+        footerImage: "url('/src/assets/images/footer.png')"
       }
     },
   },
