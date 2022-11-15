@@ -4,14 +4,27 @@ import { AuthContext } from "../../../Contexts/AuthProvider";
 
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext);
+  const {user, userLogout} = useContext(AuthContext);
+
+  const handleLogout = () => [
+    userLogout()
+    .then( () => {})
+    .catch(error => console.error(error))
+  ]
     const navItems = <React.Fragment>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/appointment">Appointment</Link></li>
-            <li><Link to="/review">Reviews</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
-            <li><Link to="/login">Login</Link></li>
+            {
+              user?.uid? 
+              <>
+              <li><Link to="/dashboard">Dashboard</Link></li>
+              <li><button onClick={handleLogout}>Logout</button></li>
+              </>
+              :
+              <li><Link to="/login">Login</Link></li>
+            }
     </React.Fragment>
   return (
     <div className="navbar bg-base-100 border-2 flex justify-between sticky top-0 z-50">
