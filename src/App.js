@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import routes from './Router/PublicRoutes.js/Routes';
 import { Toaster } from 'react-hot-toast';
+import routes from './Router/PublicRoutes/Routes';
 
 function App() {
   return (
