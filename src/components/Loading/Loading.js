@@ -4,7 +4,7 @@ const Loading = () => {
   return (
     <div class="flex justify-center items-center">
       <div
-        class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full"
+        className="spinner-border animate-spin inline-block w-20 h-20 border-8 rounded-full border-pink-900"
         role="status"
       >
         <span class="visually-hidden">...</span>
